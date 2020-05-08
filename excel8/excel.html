@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel8</title>
+    <title>Excel9.0</title>
     <link rel="icon" href="img\logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css\excel.css">
 </head>
 
 <body class="body-style">
+
+
+
     <script type="text/javascript" src="js\excel.js"></script>
     <script type="text/javascript" src="js\SelectExcel.js"></script>
     <script type="text/javascript" src="js\ResizeExcel.js"></script>
@@ -17,8 +20,8 @@
     <script type="text/javascript">
         window.onload = function () {
             var div = document.createElement("div");
-            div.style.width = "300px";
-            div.style.height = "300px";
+            div.style.width = "500px";
+            div.style.height = "500px";
             div.style.border = "2px solid green";
             document.body.appendChild(div);
 
@@ -34,12 +37,12 @@
             div3.style.border = "2px solid red";
             document.body.appendChild(div3);
 
-            let extraFunctionObj={selectExcel:true,resizeExcel:true,insertOrDeleteExcel:true};
-            let extraFunctionObj2={resizeExcel:true};
-            let extraFunctionObj3={selectExcel:true,insertOrDeleteExcel:true};
-            new Excel(div, 10, 10,extraFunctionObj);//允许 select, resize, add or delete功能
-            new Excel(div2, 10, 10,extraFunctionObj2);//允许 resize功能
-            new Excel(div3, 10, 10,extraFunctionObj3);//允许 select, add or delete 功能
+            let extraFunctionObj = { selectExcel: true, resizeExcel: true, insertOrDeleteExcel: true };
+            let extraFunctionObj2 = { resizeExcel: true };
+            let extraFunctionObj3 = { selectExcel: true, insertOrDeleteExcel: true };
+            new Excel(div, 20, 10, extraFunctionObj);//add select, resize, add or delete function 
+            new Excel(div2, 10, 10, extraFunctionObj2);//add resize function 
+            new Excel(div3, 10, 10, extraFunctionObj3);//add select, add or delete function
         }
     </script>
 </body>
